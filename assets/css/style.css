@@ -1,43 +1,67 @@
-*{
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
-    
+
     /* temporaire */
-    background-color:#f2f2f2 ; 
-    
-    
-    
-    
+    background-color: #f2f2f2;
+
+
+
+
 }
-.test{
-    border:solid 1px rgb(158, 33, 33);
+
+.test {
+    border: solid 1px rgb(158, 33, 33);
 }
 
 
-                        /*comence du programe  */
-.container{
+/*comence du programe  */
+.container {
     background-color: #ffffff;
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
-    margin: 3%;
+    /* margin: 3%; */
     border-radius: 1%;
-    
+    padding: 3%;
+
 }
+
+/* main {
+    margin: 50px;
+} */
+
 header {
     height: 100vh;
     width: 100vw;
-    margin: 50px;
+
 }
-.navbar ul{
+
+.navbar {
     display: flex;
-    /* margin: 50px; */
+
 }
-main{
-    margin: 50px;
+
+.navbar ul {
+    display: flex;
+
+}
+
+.headerClass {
+    background-image: url(/assets/img/Casas.entete.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+
+    height: 30%;
+
+
 }

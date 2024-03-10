@@ -3,14 +3,25 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: black;
+    /* Change la couleur du texte du lien en bleu */
+
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
 
-    /* temporaire */
-    background-color: #f2f2f2;
+
+    background-color: white;
 
 
 
@@ -18,20 +29,33 @@ body {
 }
 
 .test {
-    border: solid 1px rgb(158, 33, 33);
+    border: 3px solid rgb(255, 33, 33);
 }
 
-
+/* :::::::::::::::::::::::::: */
 /*comence du programe  */
 .container {
     background-color: #ffffff;
+
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
-    /* margin: 3%; */
-    border-radius: 1%;
-    padding: 3%;
 
+    border-radius: 1%;
+    margin: 0 5%;
+
+}
+
+/* a:visited {
+    color: rgb(33, 185, 152);
+} */
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: yellow;
 }
 
 /* main {
@@ -40,28 +64,180 @@ body {
 
 header {
     height: 100vh;
-    width: 100vw;
+    max-width: 100vw;
 
 }
 
 .navbar {
     display: flex;
-
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
 }
 
 .navbar ul {
     display: flex;
 
+
+}
+
+.navbar ul>li {
+
+    margin-right: 10px;
+}
+
+.bouton-nav button {
+    border-radius: 1px;
+    padding: 10px;
+
+    background-color: white;
+    border-radius: 10px;
+
+    border: 1px solid black;
+}
+
+.bouton-nav :nth-child(2) {
+    margin-left: 10px;
 }
 
 .headerClass {
-    background-image: url(/assets/img/Casas.entete.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(/assets/img/Casas.entete.jpg);
     background-position: center;
     background-size: cover;
     color: #ffffff;
+    text-shadow: -1px 2px 4px rgba(88, 88, 88, 0.932);
     text-align: center;
+    position: relative;
+    height: 50%;
+    border-radius: 15px;
 
-    height: 30%;
 
 
+}
+
+.headerClass::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.5));
+    opacity: 0.3;
+    border-radius: 15px;
+    /* Ajustez cette valeur pour changer l'intensité du filtre */
+}
+
+/*  formulaire */
+.recherche {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    top: 54%;
+    left: 20%;
+    transform: translateY(-50%);
+    transform: translateY(50%);
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid white;
+    background-color: #f0f0f0;
+
+
+}
+
+.recherche div:last-child {
+    border-right: none;
+}
+
+.recherche div {
+    margin: 0 3px;
+    border-right: 1px solid gainsboro;
+
+
+}
+
+
+
+label {
+    display: block;
+    text-align: start;
+    color: black;
+    text-shadow: none;
+}
+
+.recherche input {
+    background: transparent;
+    border-color: transparent;
+    text-align: start;
+
+}
+
+.recherche ::after {
+    background-color: white;
+}
+
+.formulaire {
+    display: flex;
+
+}
+
+.formulaire>div {
+    direction: calc();
+}
+
+.btn-recherche {
+
+    padding-inline: 25px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 20%;
+    border: 1px solid black;
+
+}
+
+.populardestinations {
+    margin-top: 50px;
+}
+
+
+
+/* responsive */
+
+
+/* Styles pour les tablettes */
+@media (max-width: 1143px) {
+
+
+    .formulaire {
+        flex-wrap: wrap;
+
+    }
+
+    .recherche {
+        @media (max-width: 1143px) {
+            height: 15%;
+        }
+    }
+
+    .btn-recherche {
+        align-self: center;
+
+    }
+
+
+
+}
+
+.imgVilles {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
 }
